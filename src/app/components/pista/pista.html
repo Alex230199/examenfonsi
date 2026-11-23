@@ -1,0 +1,23 @@
+<div class = "contenedor-principal">
+
+<h1> Formulario Perros</h1>
+
+<form [formGroup] = "formulario" (ngSubmit)="agregarObjeto()"></form>
+
+<label for="nombre">Nombre:</label>
+<input id="nombre" type="text" formControlName="nombre">
+
+@if (formulario.controls.nombre.hasError('nombreInvalido') && formulario.controls.nombre.touched) {
+
+		<small class="error-nombre">Introduce un nombre correcto.</small>
+	}
+
+    <label for="raza">Raza:</label>
+	<textarea id="raza" formControlName="raza"></textarea>
+
+	<label for="edad">Edad:</label>
+	<input id="edad" type="edad" formControlName="edad">
+
+	<button class="boton-enviar" type="submit" [disabled]="formulario.invalid">Enviar</button>
+
+</div>

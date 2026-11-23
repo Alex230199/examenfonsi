@@ -1,0 +1,32 @@
+<article class="tarjeta-Perro">
+
+
+	<div class="datos-objeto">
+
+		<h3>{{ perro.nombre }}</h3>
+
+		<p>{{ perro.raza }}</p>
+
+		<p>{{ perro.edad }}</p>
+
+	</div>
+	
+</article>
+
+<h1> LISTA DE PERROS</h1>
+
+<div class = "container">
+<h2>perros</h2>
+
+
+<ul>
+    @for (perro of Objetosperros; track perro){
+    <li style="display: flex; flex-direction: row; justify-content: center; gap: 1rem;"> 
+        
+        {{ perro.nombre}};
+		{{ perro.raza}};
+		{{ perro.edad}};
+        
+         </li>
+        }
+        </ul>
